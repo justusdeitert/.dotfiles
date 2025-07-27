@@ -20,16 +20,6 @@ chmod +x *.sh
 | `vscode_extensions.sh` | VS Code extensions |
 | `vscode_settings.json` | VS Code config |
 
-## After Setup
-
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
-```
-
-Copy VS Code settings:
-```bash
-cp vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json
-```
+## License
 
 MIT
