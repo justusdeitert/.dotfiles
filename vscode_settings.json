@@ -2,6 +2,9 @@
     "workbench.tree.renderIndentGuides": "none",
     "editor.fontFamily": "Operator Mono",
     "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "off",
     "workbench.colorTheme": "Night Wolf [gray]",
     "window.zoomLevel": 1,
     "editor.tokenColorCustomizations": {
@@ -29,8 +32,13 @@
     ],
     "editor.scrollBeyondLastLine": false,
     "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "workbench.iconTheme": "material-icon-theme",
-    "tabnine.experimentalAutoImports": true
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "git.autofetch": false,
+    "git.confirmSync": false
 }

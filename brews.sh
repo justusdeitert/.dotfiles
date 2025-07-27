@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
+
+echo "🔄 Updating Homebrew..."
 
 brew update
 brew doctor
@@ -10,23 +14,26 @@ brews=(
     deployer
     openssl
     mariadb
-    mongodb
+    mongodb-community
     node
     wp-cli
     yarn
-    serve
     tree
+    git
+    mas
 )
 
-for brew in "${brews[@]}"
-    do brew install $brew
+echo "📦 Installing formulae..."
+
+for brew in "${brews[@]}"; do
+    brew install "$brew" || echo "⚠️ Failed to install $brew"
 done
 
 apps=(
     google-chrome
     firefox
     microsoft-edge
-    sequel-pro-nightly
+    tableplus
     docker
     appcleaner
     caffeine
@@ -52,13 +59,15 @@ apps=(
     # skype
     # microsoft-teams
     # github
-    # transmission
     # dropbox
     # little-snitch
-    # editors
     # onedrive
 )
 
-for app in "${apps[@]}"
-    do brew install --cask $app
+echo "🖥️ Installing cask apps..."
+
+for app in "${apps[@]}"; do
+    brew install --cask "$app" || echo "⚠️ Failed to install $app"
 done
+
+echo "✅ Homebrew installations complete!"
