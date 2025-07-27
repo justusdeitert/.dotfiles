@@ -1,0 +1,36 @@
+{
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.fontFamily": "Operator Mono",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Night Wolf [gray]",
+    "window.zoomLevel": 1,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "keyword",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "editor.rulers": [
+        {
+            "column": 120,
+            "color": "#313131"
+        }
+    ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.formatOnType": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "tabnine.experimentalAutoImports": true
+}

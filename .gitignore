@@ -1,0 +1,45 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS file system metadata
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.DS_Store?
+._*
+
+# macOS specific resource forks files
+._*
+
+# Icon files
+Icon?
+
+# Thumbnails
+Thumbs.db
+
+# Files that might appear when copying
+Desktop.ini
+
+# Application specific
+*.swp
+*.swo
+*.swn
+
+# Vim backup files
+*.un~
+*.bak
+*.backup
+*.swp
+*.swo
+*.swn
+
+# Temporary files
+*.tmp
+
+# macOS compressed files
+*.gz
+
+# macOS QuickLook
+.AppleDouble
