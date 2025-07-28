@@ -21,6 +21,7 @@ brews=(
     tree
     git
     mas
+    imagemagick
 )
 
 echo "📦 Installing formulae..."
