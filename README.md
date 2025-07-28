@@ -5,7 +5,7 @@ My macOS dev environment setup.
 ## Setup
 
 ```bash
-chmod +x *.sh
+chmod +x *.sh             # Make scripts executable
 ./setup.sh                # Xcode CLI, Oh My Zsh, Homebrew
 ./brews.sh                # Packages & apps
 ./vscode_extensions.sh    # VS Code extensions
