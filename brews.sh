@@ -20,6 +20,7 @@ brews=(
     yarn
     tree
     git
+    gh
     mas
     imagemagick
 )
