@@ -1,44 +1,40 @@
 {
-    "workbench.tree.renderIndentGuides": "none",
-    "editor.fontFamily": "Operator Mono",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "editor.tabSize": 4,
-    "editor.wordWrap": "off",
-    "workbench.colorTheme": "Night Wolf [gray]",
-    "window.zoomLevel": 1,
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": [
-                    "comment",
-                    "entity.name.type.class",
-                    "keyword",
-                    "constant",
-                    "storage.modifier",
-                    "storage.type.class.js"
-                ],
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            }
-        ]
-    },
-    "editor.rulers": [
-        {
-            "column": 120,
-            "color": "#313131"
-        }
-    ],
-    "editor.scrollBeyondLastLine": false,
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "explorer.confirmDragAndDrop": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "workbench.startupEditor": "none",
     "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.experimental.showMoves": true,
+    "git.autofetch": true,
+    "explorer.confirmPasteNative": false,
+    "workbench.colorTheme": "PhpStorm Dark Theme",
+    "workbench.preferredDarkColorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "git.autofetch": false,
-    "git.confirmSync": false
+    "editor.stickyScroll.enabled": false,
+    "editor.scrollBeyondLastLine": false,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 1.6,
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[graphql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vetur.format.options.tabSize": 4,
+    "gitblame.inlineMessageEnabled": true,
+    "gitblame.inlineMessageFormat": "// ${author.name} (${time.ago})",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "makefile.configureOnOpen": true,
+    "chat.editing.confirmEditRequestRemoval": false,
+    "workbench.editor.enablePreview": false,
+    "dev.containers.defaultFeatures": {},
+    "git.suggestSmartCommit": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "chat.viewSessions.orientation": "stacked",
+    "git.enableSmartCommit": true,
+    "claudeCode.environmentVariables": [],
+    "claudeCode.enableNewConversationShortcut": false,
 }
