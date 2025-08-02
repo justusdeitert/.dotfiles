@@ -2,7 +2,20 @@
 
 set -e
 
-echo "🔌 Installing VS Code extensions..."
+DOTFILES_DIR="$HOME/.dotfiles"
+
+# Load colors
+source "$DOTFILES_DIR/lib/colors.sh"
+
+# Check if VS Code is installed
+if ! command -v code &>/dev/null; then
+    print_error "VS Code CLI not found. Please install VS Code and ensure 'code' is in your PATH."
+    print_info "You can install it from: https://code.visualstudio.com/"
+    print_info "Then run 'Shell Command: Install code command in PATH' from the command palette."
+    exit 1
+fi
+
+print_header "Installing VS Code extensions..."
 
 vscodeextensions=(
     # Editor essentials
@@ -34,6 +47,7 @@ vscodeextensions=(
     bradlc.vscode-tailwindcss
     vue.volar
     sissel.shopify-liquid
+    digitalbrainstem.javascript-ejs-support
     
     # GraphQL
     graphql.vscode-graphql
@@ -41,7 +55,7 @@ vscodeextensions=(
     
     # Docker
     ms-azuretools.vscode-docker
-    ms-azuretools.vscode-containers
+    docker.docker
     
     # Python
     ms-python.python
@@ -55,62 +69,43 @@ vscodeextensions=(
     ms-vscode.makefile-tools
     ms-vscode.vscode-speech
     
-    # AI (optional - comment out if not needed)
-    # github.copilot
-    # github.copilot-chat
+    # AI
+    github.copilot
+    github.copilot-chat
 )
 
+print_blank
+
+# Get list of already installed extensions
+installed_extensions=$(code --list-extensions 2>/dev/null | tr '[:upper:]' '[:lower:]')
+
+total=${#vscodeextensions[@]}
+current=0
+installed=0
+skipped=0
+failed=0
+
 for extension in "${vscodeextensions[@]}"; do
-    echo "Installing $extension..."
-    code --install-extension "$extension" --force || echo "⚠️ Failed to install $extension"
+    ((current++))
+    extension_lower=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
+    
+    # Check if already installed
+    if echo "$installed_extensions" | grep -q "^${extension_lower}$"; then
+        echo -e "   ${CYAN}●${NC} ${DIM}[$current/$total]${NC} ${BOLD}$extension${NC} ${DIM}(already installed)${NC}"
+        ((skipped++))
+    elif code --install-extension "$extension" --force &>/dev/null; then
+        echo -e "   ${GREEN}✓${NC} ${DIM}[$current/$total]${NC} ${BOLD}$extension${NC} ${GREEN}(installed)${NC}"
+        ((installed++))
+    else
+        echo -e "   ${RED}✗${NC} ${DIM}[$current/$total]${NC} ${BOLD}$extension${NC} ${RED}(failed)${NC}"
+        ((failed++))
+    fi
 done
 
-echo "✅ VS Code extensions installation complete!"
+print_blank
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if [ $failed -eq 0 ]; then
+    print_success "$skipped already installed, $installed newly installed"
+else
+    print_warning "$skipped already installed, $installed newly installed, $failed failed"
+fi
