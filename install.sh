@@ -40,9 +40,9 @@ if [[ "$1" == "--all" ]]; then
     print_blank
     
     "$DOTFILES_DIR/setup.sh"
-    "$DOTFILES_DIR/brews.sh"
+    "$DOTFILES_DIR/homebrew.sh"
     "$DOTFILES_DIR/symlinks.sh"
-    "$DOTFILES_DIR/vscode_extensions.sh"
+    "$DOTFILES_DIR/vscode.sh"
     
     print_blank
     print_success "All done!"
@@ -58,7 +58,7 @@ fi
 
 if ask "Install Homebrew packages and apps?" "y"; then
     print_blank
-    "$DOTFILES_DIR/brews.sh"
+    "$DOTFILES_DIR/homebrew.sh"
     print_blank
 fi
 
@@ -70,7 +70,7 @@ fi
 
 if ask "Install VS Code extensions?" "y"; then
     print_blank
-    "$DOTFILES_DIR/vscode_extensions.sh"
+    "$DOTFILES_DIR/vscode.sh"
     print_blank
 fi
 
