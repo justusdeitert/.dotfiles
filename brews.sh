@@ -8,6 +8,7 @@ DOTFILES_DIR="$HOME/.dotfiles"
 source "$DOTFILES_DIR/lib/colors.sh"
 
 print_header "Updating Homebrew..."
+print_blank
 
 brew update
 brew doctor || true
