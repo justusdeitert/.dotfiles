@@ -115,3 +115,6 @@ export PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Use English for CLI tool messages
+export LC_MESSAGES=en_US.UTF-8
