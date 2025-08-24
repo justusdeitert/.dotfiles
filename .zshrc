@@ -118,3 +118,9 @@ export PATH
 
 # Use English for CLI tool messages
 export LC_MESSAGES=en_US.UTF-8
+
+# Syntax highlighting (install: brew install zsh-syntax-highlighting)
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autosuggestions (install: brew install zsh-autosuggestions)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -28,6 +28,8 @@ brews=(
     gh
     mas
     imagemagick
+    zsh-syntax-highlighting
+    zsh-autosuggestions
 )
 
 print_header "Installing formulae..."
