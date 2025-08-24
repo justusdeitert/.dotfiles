@@ -1,10 +1,10 @@
 # 🛠 Dotfiles
 
-![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-Bash%2FZsh-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
-![Homebrew](https://img.shields.io/badge/Homebrew-FBB040?style=flat&logo=homebrew&logoColor=black)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat)
+[![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)](https://www.apple.com/macos)
+[![Shell](https://img.shields.io/badge/Shell-Bash%2FZsh-4EAA25?style=flat&logo=gnu-bash&logoColor=white)](https://www.zsh.org)
+[![Homebrew](https://img.shields.io/badge/Homebrew-FBB040?style=flat&logo=homebrew&logoColor=black)](https://brew.sh)
+[![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](#license)
 
 My macOS dev environment setup.
 
