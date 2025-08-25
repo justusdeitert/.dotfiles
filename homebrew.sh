@@ -28,7 +28,7 @@ brews=(
     gh
     mas
     imagemagick
-    zsh-syntax-highlighting
+    zsh-fast-syntax-highlighting
     zsh-autosuggestions
 )
 
