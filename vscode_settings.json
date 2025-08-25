@@ -7,7 +7,7 @@
     "diffEditor.experimental.showMoves": true,
     "git.autofetch": true,
     "explorer.confirmPasteNative": false,
-    "workbench.colorTheme": "PhpStorm Dark Theme",
+    "workbench.colorTheme": "PhpStorm Dark Islands",
     "workbench.preferredDarkColorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
     "editor.stickyScroll.enabled": false,
@@ -37,4 +37,5 @@
     "git.enableSmartCommit": true,
     "claudeCode.environmentVariables": [],
     "claudeCode.enableNewConversationShortcut": false,
+    "diffEditor.ignoreTrimWhitespace": false
 }

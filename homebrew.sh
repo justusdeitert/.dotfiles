@@ -28,6 +28,7 @@ brews=(
     gh
     mas
     imagemagick
+    ffmpeg
     zsh-fast-syntax-highlighting
     zsh-autosuggestions
 )
@@ -46,7 +47,7 @@ failed=0
 
 for formula in "${brews[@]}"; do
     ((current++))
-    
+
     if echo "$installed_brews" | grep -q "^${formula}$"; then
         echo -e "   ${CYAN}●${NC} ${DIM}[$current/$total]${NC} ${BOLD}$formula${NC} ${DIM}(already installed)${NC}"
         ((skipped++))
@@ -116,7 +117,7 @@ failed=0
 
 for app in "${apps[@]}"; do
     ((current++))
-    
+
     if echo "$installed_casks" | grep -q "^${app}$"; then
         echo -e "   ${CYAN}●${NC} ${DIM}[$current/$total]${NC} ${BOLD}$app${NC} ${DIM}(already installed)${NC}"
         ((skipped++))
