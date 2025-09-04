@@ -29,6 +29,7 @@ brews=(
     mas
     imagemagick
     ffmpeg
+    tinyproxy
     zsh-fast-syntax-highlighting
     zsh-autosuggestions
 )
@@ -93,6 +94,7 @@ apps=(
     rekordbox
     transmission
     battery
+    monitorcontrol
     # zoom
     # poedit
     # skype
