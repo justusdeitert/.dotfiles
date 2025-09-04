@@ -78,21 +78,18 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-path_array=(
-  '/usr/local/bin',
-  '/usr/local/sbin',
-)
-
-for string in $path_array; do
-    # prepend to PATH
-    path=($string $path)
-done
-
-# force path to have unique values
+# Ensure unique PATH entries (Homebrew handles /opt/homebrew/bin via .zprofile)
 typeset -U path
-
-# ;)
 export PATH
+
+# History
+HISTSIZE=50000
+SAVEHIST=50000
+HISTFILE="$HOME/.zsh_history"
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -124,3 +121,8 @@ source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlight
 
 # Autosuggestions (install: brew install zsh-autosuggestions)
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Zoxide: smarter cd (install: brew install zoxide)
+if command -v zoxide &>/dev/null; then
+    eval "$(zoxide init zsh)"
+fi
