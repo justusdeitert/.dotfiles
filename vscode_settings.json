@@ -8,7 +8,7 @@
     "git.autofetch": true,
     "explorer.confirmPasteNative": false,
     "workbench.colorTheme": "PhpStorm Dark Islands",
-    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "workbench.preferredDarkColorTheme": "Dark+",
     "workbench.iconTheme": "material-icon-theme",
     "editor.stickyScroll.enabled": false,
     "editor.scrollBeyondLastLine": false,
@@ -37,5 +37,6 @@
     "git.enableSmartCommit": true,
     "claudeCode.environmentVariables": [],
     "claudeCode.enableNewConversationShortcut": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false
 }
