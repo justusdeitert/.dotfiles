@@ -68,10 +68,6 @@ vscodeextensions=(
     yzhang.markdown-all-in-one
     ms-vscode.makefile-tools
     ms-vscode.vscode-speech
-    
-    # AI
-    github.copilot
-    github.copilot-chat
 )
 
 print_blank
