@@ -43,6 +43,7 @@ if [[ "$1" == "--all" ]]; then
     "$DOTFILES_DIR/homebrew.sh"
     "$DOTFILES_DIR/symlinks.sh"
     "$DOTFILES_DIR/vscode.sh"
+    "$DOTFILES_DIR/macos.sh"
     
     print_blank
     print_success "All done!"
@@ -71,6 +72,12 @@ fi
 if ask "Install VS Code extensions?" "y"; then
     print_blank
     "$DOTFILES_DIR/vscode.sh"
+    print_blank
+fi
+
+if ask "Apply macOS system preferences?" "n"; then
+    print_blank
+    "$DOTFILES_DIR/macos.sh"
     print_blank
 fi
 
