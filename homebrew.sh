@@ -30,6 +30,7 @@ brews=(
     imagemagick
     ffmpeg
     tinyproxy
+    zoxide
     zsh-fast-syntax-highlighting
     zsh-autosuggestions
 )
