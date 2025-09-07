@@ -43,5 +43,21 @@ else
     echo -e "   ${CYAN}●${NC} ${BOLD}Homebrew${NC} ${DIM}(already installed)${NC}"
 fi
 
+print_header "Setting up eza theme..."
+print_blank
+
+mkdir -p "$HOME/.config/eza"
+
+if [ ! -d "$HOME/.config/eza-themes" ]; then
+    git clone --depth 1 https://github.com/eza-community/eza-themes.git "$HOME/.config/eza-themes" &>/dev/null
+    echo -e "   ${GREEN}✓${NC} ${BOLD}eza-themes${NC} ${GREEN}(cloned)${NC}"
+else
+    git -C "$HOME/.config/eza-themes" pull --quiet || true
+    echo -e "   ${CYAN}●${NC} ${BOLD}eza-themes${NC} ${DIM}(already present, updated)${NC}"
+fi
+
+ln -sf "$HOME/.config/eza-themes/themes/tokyonight.yml" "$HOME/.config/eza/theme.yml"
+echo -e "   ${GREEN}✓${NC} ${BOLD}theme${NC} ${GREEN}(tokyonight)${NC}"
+
 print_blank
 print_success "Initial setup complete!"

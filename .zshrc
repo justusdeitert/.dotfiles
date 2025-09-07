@@ -141,6 +141,7 @@ if command -v zoxide &>/dev/null; then
 fi
 
 # eza: modern ls replacement (install: brew install eza)
+# Theme is loaded from ~/.config/eza/theme.yml (set up by setup.sh)
 if command -v eza &>/dev/null; then
     alias ls='eza --git'
     alias ll='eza -la --git'
