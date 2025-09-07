@@ -31,6 +31,7 @@ brews=(
     ffmpeg
     tinyproxy
     zoxide
+    eza
     zsh-fast-syntax-highlighting
     zsh-autosuggestions
 )
