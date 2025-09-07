@@ -3,3 +3,14 @@
 	email = mail@justusdeitert.de
 [init]
 	defaultBranch = main
+[core]
+	editor = code --wait
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[rebase]
+	autoStash = true
+	autoSquash = true
