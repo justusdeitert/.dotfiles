@@ -57,24 +57,12 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Keyboard                                                                    #
 ###############################################################################
 
-# Fast key repeat (already set, but ensure consistency)
+# Fast key repeat
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# Enable key repeat (disables press-and-hold for accent menu)
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
 # Enable full keyboard access for all controls (Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-###############################################################################
-# Trackpad & Mouse                                                            #
-###############################################################################
-
-# Tap to click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 ###############################################################################
 # Screen                                                                      #
@@ -112,13 +100,10 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# Search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
 # Disable warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Use column view in all Finder windows by default (already set)
+# Use column view in all Finder windows by default
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Avoid creating .DS_Store files on network or USB volumes
@@ -166,9 +151,18 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Show all processes
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
-# Sort by CPU usage
+# Sort by CPU usage, descending
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+# Show Data in the Disk graph (instead of IO)
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Open main window when launching
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Update frequency: 2 seconds
+defaults write com.apple.ActivityMonitor UpdatePeriod -int 2
 
 ###############################################################################
 # Apply changes                                                               #
