@@ -30,10 +30,11 @@ cd ~/.dotfiles
 
 **Run individual scripts:**
 ```bash
-./setup.sh      # Xcode CLI, Oh My Zsh, Homebrew
+./setup.sh      # Xcode CLI, Oh My Zsh, Homebrew, eza theme
 ./homebrew.sh   # Packages & apps
 ./symlinks.sh   # Create symlinks
 ./vscode.sh     # VS Code extensions
+./macos.sh      # macOS system preferences
 ```
 
 ## Files
@@ -41,11 +42,14 @@ cd ~/.dotfiles
 | File | Description |
 |------|-------------|
 | `install.sh` | Main installer (interactive or `--all`) |
-| `setup.sh` | Xcode CLI, Oh My Zsh, Homebrew |
+| `setup.sh` | Xcode CLI, Oh My Zsh, Homebrew, eza theme |
 | `homebrew.sh` | Homebrew formulae & cask apps |
 | `symlinks.sh` | Symlinks for dotfiles |
 | `vscode.sh` | VS Code extensions |
+| `macos.sh` | macOS system preferences (Finder, Dock, keyboard, screenshots…) |
 | `vscode_settings.json` | VS Code config |
+| `.zshrc` | Zsh config (Oh My Zsh, plugins, aliases) |
+| `.gitconfig` | Git config (rebase pull, autostash, autoSetupRemote…) |
 | `lib/colors.sh` | Shared color utilities |
 
 ## License
