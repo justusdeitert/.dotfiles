@@ -142,7 +142,10 @@ fi
 
 # eza: modern ls replacement (install: brew install eza)
 # Theme is loaded from ~/.config/eza/theme.yml (set up by setup.sh)
+# Unset LS_COLORS so it doesn't override eza's theme.yml
 if command -v eza &>/dev/null; then
+    unset LS_COLORS
+    export EZA_CONFIG_DIR="$HOME/.config/eza"
     alias ls='eza --git'
     alias ll='eza -la --git'
     alias lt='eza --tree --level=2'

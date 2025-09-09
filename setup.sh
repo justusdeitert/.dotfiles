@@ -56,8 +56,8 @@ else
     echo -e "   ${CYAN}●${NC} ${BOLD}eza-themes${NC} ${DIM}(already present, updated)${NC}"
 fi
 
-ln -sf "$HOME/.config/eza-themes/themes/tokyonight.yml" "$HOME/.config/eza/theme.yml"
-echo -e "   ${GREEN}✓${NC} ${BOLD}theme${NC} ${GREEN}(tokyonight)${NC}"
+ln -sf "$HOME/.config/eza-themes/themes/one_dark.yml" "$HOME/.config/eza/theme.yml"
+echo -e "   ${GREEN}✓${NC} ${BOLD}theme${NC} ${GREEN}(one_dark)${NC}"
 
 print_blank
 print_success "Initial setup complete!"
