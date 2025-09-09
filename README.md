@@ -11,9 +11,7 @@ My macOS dev environment setup.
 ## Quick Start
 
 ```bash
-git clone https://github.com/justusdeitert/.dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./install.sh
+git clone https://github.com/justusdeitert/.dotfiles.git ~/.dotfiles && cd ~/.dotfiles && ./install.sh
 ```
 
 ## Usage
