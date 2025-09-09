@@ -36,50 +36,48 @@ ask() {
 
 # Run all without asking
 if [[ "$1" == "--all" ]]; then
-    print_info "Running all scripts..."
+    do_setup=1
+    do_brew=1
+    do_symlinks=1
+    do_vscode=1
+    do_macos=1
+else
+    # Phase 1: gather answers
+    ask "Run initial setup (Xcode CLI, oh-my-zsh, Homebrew)?" "y" && do_setup=1
+    ask "Install Homebrew packages and apps?"                  "y" && do_brew=1
+    ask "Create symlinks?"                                     "y" && do_symlinks=1
+    ask "Install VS Code extensions?"                          "y" && do_vscode=1
+    ask "Apply macOS system preferences?"                      "n" && do_macos=1
+
+    # Phase 2: show plan and confirm
     print_blank
-    
-    "$DOTFILES_DIR/setup.sh"
-    "$DOTFILES_DIR/homebrew.sh"
-    "$DOTFILES_DIR/symlinks.sh"
-    "$DOTFILES_DIR/vscode.sh"
-    "$DOTFILES_DIR/macos.sh"
-    
+    print_header "Plan"
     print_blank
-    print_success "All done!"
-    exit 0
+    [[ "$do_setup"    ]] && echo -e "   ${GREEN}✓${NC} Initial setup (Xcode CLI, oh-my-zsh, Homebrew)" || echo -e "   ${DIM}✗ Initial setup${NC}"
+    [[ "$do_brew"     ]] && echo -e "   ${GREEN}✓${NC} Homebrew packages and apps"                     || echo -e "   ${DIM}✗ Homebrew packages and apps${NC}"
+    [[ "$do_symlinks" ]] && echo -e "   ${GREEN}✓${NC} Symlinks"                                       || echo -e "   ${DIM}✗ Symlinks${NC}"
+    [[ "$do_vscode"   ]] && echo -e "   ${GREEN}✓${NC} VS Code extensions"                             || echo -e "   ${DIM}✗ VS Code extensions${NC}"
+    [[ "$do_macos"    ]] && echo -e "   ${GREEN}✓${NC} macOS system preferences"                       || echo -e "   ${DIM}✗ macOS system preferences${NC}"
+    print_blank
+
+    if ! [[ "$do_setup" || "$do_brew" || "$do_symlinks" || "$do_vscode" || "$do_macos" ]]; then
+        print_warning "Nothing selected, exiting."
+        exit 0
+    fi
+
+    if ! ask "Proceed?" "y"; then
+        print_info "Aborted."
+        exit 0
+    fi
 fi
 
-# Interactive mode
-if ask "Run initial setup (Xcode CLI, oh-my-zsh, Homebrew)?" "y"; then
-    print_blank
-    "$DOTFILES_DIR/setup.sh"
-    print_blank
-fi
-
-if ask "Install Homebrew packages and apps?" "y"; then
-    print_blank
-    "$DOTFILES_DIR/homebrew.sh"
-    print_blank
-fi
-
-if ask "Create symlinks?" "y"; then
-    print_blank
-    "$DOTFILES_DIR/symlinks.sh"
-    print_blank
-fi
-
-if ask "Install VS Code extensions?" "y"; then
-    print_blank
-    "$DOTFILES_DIR/vscode.sh"
-    print_blank
-fi
-
-if ask "Apply macOS system preferences?" "n"; then
-    print_blank
-    "$DOTFILES_DIR/macos.sh"
-    print_blank
-fi
+# Phase 3: execute
+print_blank
+[[ "$do_setup"    ]] && "$DOTFILES_DIR/setup.sh"    && print_blank
+[[ "$do_brew"     ]] && "$DOTFILES_DIR/homebrew.sh" && print_blank
+[[ "$do_symlinks" ]] && "$DOTFILES_DIR/symlinks.sh" && print_blank
+[[ "$do_vscode"   ]] && "$DOTFILES_DIR/vscode.sh"   && print_blank
+[[ "$do_macos"    ]] && "$DOTFILES_DIR/macos.sh"    && print_blank
 
 echo ""
 echo -e "${BOLD_GREEN}✓ All done!${NC}"
