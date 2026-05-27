@@ -46,6 +46,7 @@ vscodeextensions=(
     # JavaScript & Frontend
     bradlc.vscode-tailwindcss
     vue.volar
+    astro-build.astro-vscode
     sissel.shopify-liquid
     digitalbrainstem.javascript-ejs-support
     
