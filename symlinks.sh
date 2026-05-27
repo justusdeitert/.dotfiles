@@ -43,6 +43,8 @@ create_symlink ".zshrc" "$HOME/.zshrc"
 create_symlink ".github" "$HOME/.github"
 create_symlink "vscode_settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 create_symlink ".gitconfig" "$HOME/.gitconfig"
+create_symlink "ai-memories" "$HOME/Library/Application Support/Code/User/globalStorage/github.copilot-chat/memory-tool/memories"
+create_symlink "ai-memories/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 
 print_blank
 print_success "Symlinks created successfully!"

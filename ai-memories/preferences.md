@@ -1,0 +1,1 @@
+- Don't use hyphens/em dashes in text. User sees it as an AI pattern.
