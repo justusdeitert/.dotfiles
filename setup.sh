@@ -59,5 +59,23 @@ fi
 ln -sf "$HOME/.config/eza-themes/themes/one_dark.yml" "$HOME/.config/eza/theme.yml"
 echo -e "   ${GREEN}✓${NC} ${BOLD}theme${NC} ${GREEN}(one_dark)${NC}"
 
+print_header "Installing Rust toolchain (rustup)..."
+print_blank
+
+if ! command -v rustup &>/dev/null; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable --no-modify-path
+    # rustup --no-modify-path skips PATH edits; we manage it ourselves via .zshenv
+    if [ ! -f "$HOME/.zshenv" ] || ! grep -q '.cargo/env' "$HOME/.zshenv"; then
+        echo '. "$HOME/.cargo/env"' >> "$HOME/.zshenv"
+    fi
+    # shellcheck disable=SC1091
+    . "$HOME/.cargo/env"
+    echo -e "   ${GREEN}✓${NC} ${BOLD}rustup${NC} ${GREEN}(installed, stable toolchain)${NC}"
+else
+    rustup self update &>/dev/null || true
+    rustup update stable &>/dev/null || true
+    echo -e "   ${CYAN}●${NC} ${BOLD}rustup${NC} ${DIM}(already installed, updated)${NC}"
+fi
+
 print_blank
 print_success "Initial setup complete!"

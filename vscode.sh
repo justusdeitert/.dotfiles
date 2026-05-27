@@ -62,7 +62,13 @@ vscodeextensions=(
     ms-python.vscode-pylance
     ms-python.debugpy
     ms-python.vscode-python-envs
-    
+
+    # Rust
+    rust-lang.rust-analyzer
+    tamasfe.even-better-toml
+    fill-labs.dependi
+    vadimcn.vscode-lldb
+
     # Other
     prisma.prisma
     yzhang.markdown-all-in-one
