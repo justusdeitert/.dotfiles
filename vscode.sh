@@ -23,6 +23,7 @@ vscodeextensions=(
     esbenp.prettier-vscode
     dbaeumer.vscode-eslint
     rvest.vs-code-prettier-eslint
+    biomejs.biome
     foxundermoon.shell-format
     stylelint.vscode-stylelint
     
@@ -45,6 +46,7 @@ vscodeextensions=(
     
     # JavaScript & Frontend
     bradlc.vscode-tailwindcss
+    antfu.unocss
     vue.volar
     astro-build.astro-vscode
     sissel.shopify-liquid
