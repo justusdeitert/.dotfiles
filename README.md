@@ -46,6 +46,7 @@ git clone https://github.com/justusdeitert/.dotfiles.git ~/.dotfiles && cd ~/.do
 | `vscode.sh` | VS Code extensions |
 | `macos.sh` | macOS system preferences (Finder, Dock, keyboard, screenshots…) |
 | `vscode_settings.json` | VS Code config |
+| `.claude/settings.json` | Claude Code config (view mode, permissions, env) |
 | `.zshrc` | Zsh config (Oh My Zsh, plugins, aliases) |
 | `.gitconfig` | Git config (rebase pull, autostash, autoSetupRemote…) |
 | `lib/colors.sh` | Shared color utilities |

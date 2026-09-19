@@ -97,6 +97,8 @@ apps=(
     transmission
     battery
     monitorcontrol
+    claude
+    claude-code
     # zoom
     # poedit
     # skype

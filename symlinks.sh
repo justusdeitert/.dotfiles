@@ -44,7 +44,14 @@ create_symlink ".github" "$HOME/.github"
 create_symlink "vscode_settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 create_symlink ".gitconfig" "$HOME/.gitconfig"
 create_symlink "ai-memories" "$HOME/Library/Application Support/Code/User/globalStorage/github.copilot-chat/memory-tool/memories"
-create_symlink "ai-memories/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+
+if command -v claude &>/dev/null || code --list-extensions 2>/dev/null | grep -qi "anthropic.claude-code"; then
+    create_symlink "ai-memories/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+    create_symlink ".claude/settings.json" "$HOME/.claude/settings.json"
+else
+    print_blank
+    echo -e "   ${DIM}○ Skipping Claude Code symlinks (not installed)${NC}"
+fi
 
 print_blank
 print_success "Symlinks created successfully!"

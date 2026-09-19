@@ -45,6 +45,7 @@ When working inside `~/.dotfiles`, this file also acts as the repo-specific inst
 - `vscode_settings.json` - VS Code user settings.
 - `.zshrc`, `.gitconfig` - Shell and git config.
 - `.github/` - Global Copilot instructions and prompt rules (symlinked to `~/.github/`).
+- `.claude/` - Claude Code settings (symlinked to `~/.claude/settings.json`).
 - `ai-memories/` - Shared AI assistant memory (symlinked to Copilot + Claude memory paths).
 
 ### Conventions

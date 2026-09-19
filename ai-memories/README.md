@@ -14,6 +14,7 @@ Shared markdown notes used as long-term memory by AI coding assistants (Copilot 
 | --- | --- |
 | `ai-memories/` | `~/Library/Application Support/Code/User/globalStorage/github.copilot-chat/memory-tool/memories` |
 | `ai-memories/CLAUDE.md` | `~/.claude/CLAUDE.md` |
+| `.claude/settings.json` | `~/.claude/settings.json` |
 
 ## Guidelines
 
