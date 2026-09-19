@@ -4,7 +4,7 @@ Shared markdown notes used as long-term memory by AI coding assistants (Copilot 
 
 ## Layout
 
-- `preferences.md`, `pitfalls.md`, `github-achievements.md` — actual notes. Plain markdown, keep short.
+- `preferences.md`, `pitfalls.md`, `git-safety.md`, `hetzner-server.md` — actual notes. Plain markdown, keep short.
 - `CLAUDE.md` — entry point for Claude Code. Imports the other notes via `@file.md` syntax.
 - `session/` — Copilot per-conversation scratch space. Ignored.
 
